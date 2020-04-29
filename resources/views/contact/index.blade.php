@@ -21,9 +21,9 @@
             <tbody>
                 @foreach ($contacts as $contact)
                     
-                @endforeach
+                
                 <tr>
-                    <td>1</td>
+                    <td>{{$contact->id}}</td>
                 <td>{{$contact->name}}</td>
                     <td>{{$contact->email}}</td>
                     <td>{{$contact->phone}}</td>
@@ -34,7 +34,7 @@
                         <a href="/{{$contact->id}}/edit" class="text-primary"><i class="fa fa-fw fa-edit"></i> Edit</a> |
                         <a href="/{{$contact->id}}/delete" class="text-danger" onclick="return confirm('Are you sure to delete this user?');"><i class="fa fa-fw fa-trash"></i> Delete</a>
                     </td>
-
+                @endforeach
                 </tr>
             </tbody>
         </table>
